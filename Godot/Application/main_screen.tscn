@@ -24,6 +24,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_skgiv")
 urlToStartRecyling = "res://Application/start_recyling.tscn"
+urlToAboutUs = "res://Application/about_us.tscn"
+urlToOptions = "res://Application/options.tscn"
+urlToHelp = "res://Application/help.tscn"
 
 [node name="Screen" type="Control" parent="."]
 anchors_preset = 0
@@ -92,3 +95,6 @@ theme_override_font_sizes/font_size = 20
 text = "About Us"
 
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/Start_Recycling" to="." method="_on_start_recycling_pressed"]
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/AboutUs" to="." method="_on_about_us_pressed"]
