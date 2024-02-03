@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://b13kutbtadivj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmc4y"]
+bg_color = Color(0.572549, 0.529412, 0.639216, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 500.0
+offset_bottom = 936.0
+
+[node name="Panel" type="Panel" parent="Screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmc4y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.359
+anchor_top = 0.748
+anchor_right = 0.641
+anchor_bottom = 0.915
+offset_left = -1.52588e-05
+offset_top = -0.128052
+offset_right = -3.05176e-05
+offset_bottom = -0.440002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start_Recycling" type="Button" parent="Screen/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Start Recyling"
+
+[node name="Options" type="Button" parent="Screen/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="Help" type="Button" parent="Screen/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Help"
+
+[node name="AboutUs" type="Button" parent="Screen/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "About Us"
