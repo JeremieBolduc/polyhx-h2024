@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://baqno8uyfmy3n"]
+[gd_scene load_steps=4 format=3 uid="uid://baqno8uyfmy3n"]
 
 [ext_resource type="Script" path="res://Application/start_recyling.gd" id="1_bdlu2"]
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="2_qys28"]
@@ -9,8 +9,6 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
-
-[sub_resource type="ImageTexture" id="ImageTexture_rseao"]
 
 [node name="StartRecyling" type="Control"]
 layout_mode = 3
@@ -41,10 +39,14 @@ metadata/_edit_use_anchors_ = true
 mode = 2
 title = "Open a File"
 initial_position = 1
-size = Vector2i(454, 500)
+size = Vector2i(454, 159)
+visible = true
 ok_button_text = "Open"
 file_mode = 0
 access = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(250, 280)
 
 [node name="UploadAnImage" type="Button" parent="."]
 layout_mode = 0
@@ -54,30 +56,6 @@ offset_right = 320.0
 offset_bottom = 486.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Upload an image"
-
-[node name="ColorRect" type="ColorRect" parent="."]
-clip_contents = true
-layout_mode = 0
-offset_left = 107.0
-offset_top = 133.0
-offset_right = 395.0
-offset_bottom = 408.0
-color = Color(0.290196, 0.258824, 0.329412, 1)
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.056
-anchor_top = 0.062
-anchor_right = 0.944
-anchor_bottom = 0.954
-offset_left = -0.0880013
-offset_top = -0.0340004
-offset_right = 0.0879822
-offset_bottom = 0.121979
-texture = SubResource("ImageTexture_rseao")
-expand_mode = 2
-stretch_mode = 3
 
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="UploadAnImage" to="." method="_on_upload_an_image_pressed"]
