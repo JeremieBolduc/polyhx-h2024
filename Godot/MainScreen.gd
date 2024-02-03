@@ -20,7 +20,7 @@ func _on_start_recycling_pressed():
 
 
 func _on_about_us_pressed():
-	get_tree().change_scene_to_file(urlToStartRecyling)
+	get_tree().change_scene_to_file(urlToAboutUs)
 
 
 func _on_options_pressed():
