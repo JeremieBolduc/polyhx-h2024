@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://baqno8uyfmy3n"]
+
+[ext_resource type="Script" path="res://Application/start_recyling.gd" id="1_bdlu2"]
+[ext_resource type="Texture2D" uid="uid://dqsx761pqmf3t" path="res://Media/Images/arrow-left.svg" id="1_g4v4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1s7k"]
+bg_color = Color(0.537255, 0.486275, 0.611765, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.282353, 0.258824, 0.321569, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="StartRecyling" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bdlu2")
+
+[node name="Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 500.0
+offset_bottom = 936.0
+
+[node name="Panel" type="Panel" parent="Screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g1s7k")
+
+[node name="Header" type="HBoxContainer" parent="Screen/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.032
+anchor_right = 0.16
+anchor_bottom = 0.083
+offset_top = 0.0479984
+offset_bottom = 0.311996
+
+[node name="GoBack" type="TextureButton" parent="Screen/Panel/Header"]
+layout_mode = 2
+texture_normal = ExtResource("1_g4v4m")
+
+[connection signal="pressed" from="Screen/Panel/Header/GoBack" to="." method="_on_go_back_pressed"]

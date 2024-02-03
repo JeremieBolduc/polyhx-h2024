@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b13kutbtadivj"]
+[gd_scene load_steps=4 format=3 uid="uid://b13kutbtadivj"]
 
-[ext_resource type="Texture2D" uid="uid://dte6e2loq5i5x" path="res://Media/Images/recycle.png" id="1_6sfdy"]
+[ext_resource type="Script" path="res://MainScreen.gd" id="1_skgiv"]
+[ext_resource type="Texture2D" uid="uid://dte6e2loq5i5x" path="res://Media/Images/recycle.png" id="2_3qlsn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmc4y"]
-bg_color = Color(0.458824, 0.415686, 0.521569, 1)
+bg_color = Color(0.537255, 0.486275, 0.611765, 1)
 border_width_left = 15
 border_width_top = 15
 border_width_right = 15
@@ -21,6 +22,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_skgiv")
+urlToStartRecyling = "res://Application/start_recyling.tscn"
 
 [node name="Screen" type="Control" parent="."]
 anchors_preset = 0
@@ -52,7 +55,7 @@ grow_vertical = 2
 [node name="Recycle" type="Sprite2D" parent="Screen/Panel/Control"]
 position = Vector2(0, 40)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_6sfdy")
+texture = ExtResource("2_3qlsn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Screen/Panel"]
 layout_mode = 1
@@ -87,3 +90,5 @@ text = "Help"
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "About Us"
+
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/Start_Recycling" to="." method="_on_start_recycling_pressed"]
