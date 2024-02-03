@@ -43,7 +43,7 @@ offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "This mobile app was developed in the optic of the 2024 
-Hackathon organized by Polytechique's Poly-Hacks comitee. This app aims to offer to its users new insight regarding  waste to promote better and more responsible habits regarding recycling, reusing and reducing in order to  ensure a more sustainable and greener society!"
+Hackathon organized by Polytechique's Poly-Hacks comitee. This app aims to offer new insight and advice to its users regarding  waste management to promote better and more responsible habits regarding recycling, reusing and reducing in order to  ensure a more sustainable and greener society!"
 horizontal_alignment = 3
 vertical_alignment = 1
 autowrap_mode = 2
