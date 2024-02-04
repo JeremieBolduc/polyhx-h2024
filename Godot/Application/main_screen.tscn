@@ -101,7 +101,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Start_Recycling" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Start Recyling"
+text = "Start Recycling"
 
 [node name="History" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
@@ -112,7 +112,7 @@ text = "History
 [node name="AboutUs" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "About Us"
+text = "About "
 
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/Start_Recycling" to="." method="_on_start_recycling_pressed"]
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/History" to="." method="_on_help_pressed"]

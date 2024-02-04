@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Application/start_recyling.gd" id="1_bdlu2"]
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="2_qys28"]
-[ext_resource type="PackedScene" path="res://Application/loading_scene.tscn" id="2_w3hlw"]
+[ext_resource type="PackedScene" uid="uid://bmkmjndlhqcgy" path="res://Application/loading_scene.tscn" id="2_w3hlw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g5en"]
 bg_color = Color(0.168627, 0.243137, 0.180392, 1)
@@ -60,6 +60,7 @@ file_mode = 0
 access = 2
 
 [node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 92.0
 offset_top = 470.0
 offset_right = 411.0
