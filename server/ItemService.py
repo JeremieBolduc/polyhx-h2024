@@ -8,7 +8,10 @@ class ItemService:
         self.collection = self.db["items"]
 
     def get_all(self):
-        return self.collection.find()
+        cursor = self.collection.find({})
+        items = list(cursor)
+
+        return items
 
     def insert(self, data):
         self.collection.insert_one(data)

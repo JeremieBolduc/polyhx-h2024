@@ -1,7 +1,10 @@
+import json
 import os
 from http.client import HTTPException
 from fastapi import FastAPI
 from dotenv import load_dotenv
+from fastapi.responses import JSONResponse
+from bson import json_util
 
 from GPTTextModel import GPTTextModel
 from GPTVisionModel import GPTVisionModel
@@ -22,8 +25,9 @@ item_service = ItemService(db_connection_string)
 @app.get("/items")
 async def get_items():
     items = item_service.get_all()
-    print(items)
-    return items
+    items_json = json.dumps(items, default=json_util.default)
+
+    return JSONResponse(content=items_json)
 
 @app.post("/items")
 async def create_item(payload: dict):
