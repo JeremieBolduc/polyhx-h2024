@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5ubfbj52yex5"]
+[gd_scene load_steps=6 format=3 uid="uid://c5ubfbj52yex5"]
 
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_4ctd3"]
+[ext_resource type="Script" path="res://Application/history_item.gd" id="1_lusr0"]
 [ext_resource type="FontFile" uid="uid://gxpgup0y8y27" path="res://Media/Font/Sakamoto.ttf" id="2_ule1w"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_tkkq1"]
@@ -17,13 +18,14 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[node name="Control" type="Control"]
+[node name="HistoryItem" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lusr0")
 metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Screen" parent="." instance=ExtResource("1_4ctd3")]
