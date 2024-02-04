@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dht2xdphotr1l"]
+[gd_scene load_steps=5 format=3 uid="uid://dht2xdphotr1l"]
 
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_yvbqf"]
+[ext_resource type="FontFile" uid="uid://gxpgup0y8y27" path="res://Media/Font/Sakamoto.ttf" id="2_jdbwe"]
 [ext_resource type="Texture2D" uid="uid://r3fuq20vkevu" path="res://Media/Images/Logo_Wallpaper.png" id="2_k7fs4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glvgr"]
@@ -35,9 +36,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -230.0
-offset_top = -280.0
+offset_top = -307.0
 offset_right = 230.0
-offset_bottom = 220.0
+offset_bottom = 193.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_glvgr")
@@ -52,7 +53,8 @@ offset_top = 95.0
 offset_right = 87.5
 offset_bottom = 150.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("2_jdbwe")
+theme_override_font_sizes/font_size = 45
 text = "About "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -66,9 +68,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -219.5
-offset_top = -237.5
+offset_top = -258.5
 offset_right = 219.5
-offset_bottom = 165.5
+offset_bottom = 144.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
