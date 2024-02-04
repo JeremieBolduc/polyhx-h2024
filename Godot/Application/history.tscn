@@ -59,24 +59,3 @@ layout_mode = 2
 
 [node name="HistoryButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
 layout_mode = 2
-
-[node name="HistoryButton2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2
-
-[node name="HistoryButton8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
-layout_mode = 2

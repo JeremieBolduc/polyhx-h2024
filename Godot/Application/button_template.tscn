@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://471io5grnwcd"]
+[gd_scene load_steps=12 format=3 uid="uid://471io5grnwcd"]
 
+[ext_resource type="Script" path="res://Application/button_template.gd" id="1_edyo0"]
 [ext_resource type="Texture2D" uid="uid://dtsonar4swjdf" path="res://Media/Images/icons8-arrow-60.png" id="1_opc0l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl6ve"]
@@ -25,6 +26,16 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgxdn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5qth"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bqo6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efgmp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blre4"]
+
 [node name="HistoryButton" type="Button"]
 anchors_preset = -1
 anchor_right = 0.426
@@ -35,6 +46,8 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gl6ve")
 text = "............"
+script = ExtResource("1_edyo0")
+urlToHistoryItem = "res://Application/history_item.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
@@ -91,3 +104,15 @@ anchor_bottom = 0.847604
 theme_override_font_sizes/font_size = 25
 text = "Date scanned"
 metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 217.0
+offset_bottom = 91.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vgxdn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q5qth")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6bqo6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_efgmp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_blre4")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
