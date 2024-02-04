@@ -32,6 +32,7 @@ urlToMainMenu = "res://Application/history.tscn"
 [node name="ColorRect" type="ColorRect" parent="."]
 clip_contents = true
 layout_direction = 1
+layout_mode = 0
 offset_left = 80.0
 offset_top = 102.0
 offset_right = 420.0
@@ -74,6 +75,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_xptaa")
 metadata/_edit_use_anchors_ = true
 
 [node name="ResponseLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 108.0
 offset_top = 535.0
 offset_right = 390.0
