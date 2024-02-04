@@ -25,6 +25,7 @@ metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Screen" parent="." instance=ExtResource("2_qys28")]
 layout_mode = 1
+urlToMainMenu = "res://Application/main_screen.tscn"
 
 [node name="Image" type="Panel" parent="."]
 layout_mode = 1
