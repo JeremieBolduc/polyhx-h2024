@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 
-class GPTTextModel():
+class GPTTextModel:
     def __init__(self):
         self.client = OpenAI()
         self.preprompts = {
