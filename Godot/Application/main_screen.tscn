@@ -27,7 +27,7 @@ corner_radius_top_right = 60
 corner_radius_bottom_right = 60
 corner_radius_bottom_left = 60
 
-[node name="MainScreen2" type="Control"]
+[node name="MainScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +38,7 @@ script = ExtResource("1_skgiv")
 urlToStartRecyling = "res://Application/start_recyling.tscn"
 urlToAboutUs = "res://Application/about_us.tscn"
 urlToOptions = "res://Application/options.tscn"
-urlToHelp = "res://Application/help.tscn"
+urlToHistory = "res://Application/history.tscn"
 metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Screen" type="Control" parent="."]
@@ -111,10 +111,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Options"
 
-[node name="Help" type="Button" parent="Screen/Panel/VBoxContainer"]
+[node name="History" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Help"
+text = "History
+"
 
 [node name="AboutUs" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
@@ -123,5 +124,5 @@ text = "About Us"
 
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/Start_Recycling" to="." method="_on_start_recycling_pressed"]
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Screen/Panel/VBoxContainer/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/History" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/AboutUs" to="." method="_on_about_us_pressed"]

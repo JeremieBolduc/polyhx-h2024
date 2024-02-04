@@ -3,7 +3,7 @@ extends Control
 @export_file("*.tscn") var urlToStartRecyling: String
 @export_file("*.tscn") var urlToAboutUs: String
 @export_file("*.tscn") var urlToOptions: String
-@export_file("*.tscn") var urlToHelp: String
+@export_file("*.tscn") var urlToHistory: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,4 +28,4 @@ func _on_options_pressed():
 
 
 func _on_help_pressed():
-	get_tree().change_scene_to_file(urlToHelp)
+	get_tree().change_scene_to_file(urlToHistory)
