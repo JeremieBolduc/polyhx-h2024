@@ -10,4 +10,4 @@ func _process(delta):
 	$TextureProgressBar.value = (currentValue % maxValue)
 
 func _on_timer_timeout():
-	currentValue += 2
+	currentValue += 6

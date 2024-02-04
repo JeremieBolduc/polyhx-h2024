@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmkmjndlhqcgy"]
 
-[ext_resource type="Texture2D" uid="uid://clwpa73aionms" path="res://Media/Images/ProgressBarBlack.png" id="1_kb4lk"]
 [ext_resource type="Script" path="res://Application/TourningAnimation.gd" id="1_l3img"]
-[ext_resource type="Texture2D" uid="uid://bsix3yso1s5ie" path="res://Media/Images/ProgressBarWhite.png" id="2_75s2u"]
+[ext_resource type="Texture2D" uid="uid://bt1ctceqw821j" path="res://Media/Images/LoadingUnder.png" id="2_yjl7k"]
+[ext_resource type="Texture2D" uid="uid://dlhk0jnhlrp66" path="res://Media/Images/LoadinOver.png" id="3_uun23"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ffhp"]
 bg_color = Color(0, 0, 0, 0.313726)
@@ -55,19 +55,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -47.0
-offset_right = 1839.0
-offset_bottom = 1033.0
+offset_left = -87.0
+offset_top = -88.0
+offset_right = 1961.0
+offset_bottom = 1960.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.085, 0.085)
 fill_mode = 4
-texture_under = ExtResource("1_kb4lk")
-texture_progress = ExtResource("2_75s2u")
+texture_under = ExtResource("2_yjl7k")
+texture_progress = ExtResource("3_uun23")
 
 [node name="Timer" type="Timer" parent="Panel/TourningAnimation"]
-wait_time = 0.1
+wait_time = 0.05
 autostart = true
 
 [connection signal="timeout" from="Panel/TourningAnimation/Timer" to="Panel/TourningAnimation" method="_on_timer_timeout"]
