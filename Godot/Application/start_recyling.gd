@@ -47,7 +47,7 @@ func _on_confirm_pressed():
 		
 		var headers = ["Content-Type: application/json;"]
 		var status = http_request.request(
-			"http://localhost:8000/image",
+			"http://localhost:8000/items",
 			headers,
 			HTTPClient.METHOD_POST,
 			JSON.stringify(payload)
