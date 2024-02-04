@@ -26,8 +26,11 @@ func _on_file_dialog_file_selected(path):
 	globalPath = path
 	file = FileAccess.open(path, FileAccess.READ)
 	
+	var image = Image.new()
+	image.load(path)
+	
 	var image_texture = ImageTexture.new()
-	image_texture.set_image(file)
+	image_texture.set_image(image)
 	
 	$ColorRect/TextureRect.texture = image_texture
 

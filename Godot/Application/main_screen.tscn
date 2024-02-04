@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b13kutbtadivj"]
+[gd_scene load_steps=6 format=3 uid="uid://b13kutbtadivj"]
 
 [ext_resource type="Script" path="res://MainScreen.gd" id="1_skgiv"]
+[ext_resource type="Texture2D" uid="uid://8onn6pi5lp65" path="res://Media/Images/Trash_Talk_Line_Shadow.png" id="2_nmqt3"]
+[ext_resource type="Texture2D" uid="uid://dp2qimqbv6k42" path="res://Media/Images/Logo_Shadow.png" id="3_0olsf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmc4y"]
 bg_color = Color(0.266667, 0.431373, 0.290196, 0.662745)
@@ -13,6 +15,17 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t4nx"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [node name="MainScreen2" type="Control"]
 layout_mode = 3
@@ -45,27 +58,48 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_pmc4y")
 
 [node name="Control" type="Control" parent="Screen/Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_top = -115.0
-offset_right = 40.0
-offset_bottom = -75.0
+anchor_left = 0.15
+anchor_top = 0.154
+anchor_right = 0.858
+anchor_bottom = 0.45
+offset_left = 175.0
+offset_top = 149.856
+offset_right = -165.0
+offset_bottom = -127.2
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TrashTalkLineShadow" type="Sprite2D" parent="Screen/Panel/Control"]
+position = Vector2(-26, -39)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_nmqt3")
+
+[node name="LogoShadow" type="Sprite2D" parent="Screen/Panel/Control"]
+position = Vector2(95, 71)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_0olsf")
+
+[node name="Panel2" type="Panel" parent="Screen/Panel/Control"]
+layout_mode = 0
+offset_left = -183.0
+offset_top = 225.0
+offset_right = 185.0
+offset_bottom = 490.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5t4nx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Screen/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3
-anchor_top = 0.604701
+anchor_top = 0.557692
 anchor_right = 0.704
-anchor_bottom = 0.801282
+anchor_bottom = 0.754274
+offset_left = -40.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Start_Recycling" type="Button" parent="Screen/Panel/VBoxContainer"]
 layout_mode = 2
