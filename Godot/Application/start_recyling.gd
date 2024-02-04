@@ -62,6 +62,7 @@ func _on_confirm_pressed():
 func _on_request_completed(result, response_code, headers, body):
 	$LoadingScene.visible = false
 	$VBoxContainer.visible = false
+	$Panel2.visible = false
 
 	if response_code == 200:
 		$Container/ResponseLabel.text = body.get_string_from_utf8()
