@@ -14,3 +14,6 @@ func _process(delta):
 func _on_button_pressed():
 	print("okesdpofks")
 	get_tree().change_scene_to_file(urlToHistoryItem)
+
+func setup(itemInfo):
+	pass
