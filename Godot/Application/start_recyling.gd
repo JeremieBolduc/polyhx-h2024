@@ -49,11 +49,14 @@ func _on_confirm_pressed():
 			JSON.stringify(payload)
 		)
 		
+		$LoadingScene.visible = true
+		
 		if status != OK:
 			push_error("An error occurred in the HTTP request.")
 		
 
 func _on_request_completed(result, response_code, headers, body):
+	$LoadingScene.visible = false
 	if response_code == 200:
 		print("Request successful")
 		print("Response body: ", body)
