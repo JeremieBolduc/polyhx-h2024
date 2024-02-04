@@ -26,6 +26,8 @@ grow_vertical = 2
 script = ExtResource("1_3f23a")
 urlToPlastic = "res://Application/plastic.tscn"
 urlToMetal = "res://Application/metal.tscn"
+urlToPaper = "res://Application/paper.tscn"
+urlToGlass = "res://Application/glass.tscn"
 metadata/_edit_vertical_guides_ = [251.0]
 
 [node name="Screen" parent="." instance=ExtResource("2_av2rt")]
@@ -125,6 +127,18 @@ theme_override_colors/font_color = Color(0.168627, 0.243137, 0.180392, 1)
 text = "Paper/Cardbox"
 metadata/_edit_use_anchors_ = true
 
+[node name="Paper3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 473.0
+offset_right = 422.0
+offset_bottom = 619.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h42kt")
+
 [node name="Glass" parent="." instance=ExtResource("3_0fbj2")]
 layout_mode = 1
 offset_left = 81.0
@@ -149,6 +163,18 @@ text = "Glass
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="Glass2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 640.0
+offset_right = 422.0
+offset_bottom = 786.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h42kt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h42kt")
+
 [node name="Bag" type="Sprite2D" parent="."]
 position = Vector2(149, 216)
 scale = Vector2(0.14, 0.14)
@@ -171,3 +197,5 @@ texture = ExtResource("7_nq1m6")
 
 [connection signal="pressed" from="Plastic2" to="." method="_on_plastic_2_pressed"]
 [connection signal="pressed" from="Metal2" to="." method="_on_metal_2_pressed"]
+[connection signal="pressed" from="Paper3" to="." method="_on_paper_3_pressed"]
+[connection signal="pressed" from="Glass2" to="." method="_on_glass_2_pressed"]

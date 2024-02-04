@@ -1,6 +1,7 @@
 extends Control
 
 @export_file("*.tscn") var urlToMainMenu: String
+@export_file("*.tscn") var mainMenu: String
 var richTextLabel
 
 # Called when the node enters the scene tree for the first time.
@@ -17,4 +18,4 @@ func _on_go_back_pressed():
 
 
 func _on_texture_button_pressed():
-	get_tree().change_scene_to_file(urlToMainMenu)
+	get_tree().change_scene_to_file(mainMenu)

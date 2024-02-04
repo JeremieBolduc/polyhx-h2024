@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nek5t")
+mainMenu = "res://Application/main_screen.tscn"
 metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Panel" type="Panel" parent="."]
