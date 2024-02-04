@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://471io5grnwcd" path="res://Application/button_template.tscn" id="2_rcfyh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by5f3"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5

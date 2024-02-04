@@ -5,11 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://r3fuq20vkevu" path="res://Media/Images/Logo_Wallpaper.png" id="2_k7fs4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glvgr"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 6
-border_color = Color(0.321569, 0.321569, 0.321569, 1)
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Screen" parent="." instance=ExtResource("1_yvbqf")]
 layout_mode = 1
@@ -67,12 +69,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -219.5
-offset_top = -258.5
-offset_right = 219.5
-offset_bottom = 144.5
+offset_left = -210.0
+offset_top = -273.0
+offset_right = 212.0
+offset_bottom = 159.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.168627, 0.243137, 0.180392, 1)
 theme_override_font_sizes/font_size = 18
 text = "TrashTalk was created for the 2024 edition of the Hackathon organized by the Poly-Hacks committee. Designed by  a team of students from Polytechnique Montréal, the application provides its users with innovative insight and advice on waste management. Our goal is to promote eco-responsability and better  habits regarding the way we recycle and reuse in order to ensure sustainability for future generations!  
 
