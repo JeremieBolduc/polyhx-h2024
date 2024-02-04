@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4b8037q6kkr0"]
+[gd_scene load_steps=10 format=3 uid="uid://d4b8037q6kkr0"]
 
 [ext_resource type="Script" path="res://Application/template.gd" id="1_nek5t"]
 [ext_resource type="Texture2D" uid="uid://dtsonar4swjdf" path="res://Media/Images/icons8-arrow-60.png" id="2_ap2fi"]
 [ext_resource type="Texture2D" uid="uid://8onn6pi5lp65" path="res://Media/Images/Trash_Talk_Line_Shadow.png" id="2_msxo3"]
+[ext_resource type="Texture2D" uid="uid://dhjri70m1b6xa" path="res://Media/Images/info.png" id="4_rddrg"]
+[ext_resource type="Texture2D" uid="uid://dpksw2o8p2bvc" path="res://Media/Images/home.png" id="5_cvjj2"]
+[ext_resource type="Texture2D" uid="uid://dv5rg2y12jv8l" path="res://Media/Images/question.png" id="6_uo3pq"]
+[ext_resource type="Texture2D" uid="uid://ocvwsw7owwty" path="res://Media/Images/history_icon.png" id="7_yh4fw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbs7c"]
 bg_color = Color(0.266667, 0.431373, 0.290196, 0.662745)
@@ -16,6 +20,12 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqjex"]
+border_width_top = 5
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [node name="Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -24,6 +34,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nek5t")
+mainMenu = "res://Application/main_screen.tscn"
+about = "res://Application/about_us.tscn"
+howTo = "res://Application/how_to_recycle.tscn"
+history = "res://Application/history.tscn"
 metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Panel" type="Panel" parent="."]
@@ -65,5 +79,52 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 texture_normal = ExtResource("2_ap2fi")
 
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 868.0
+offset_right = 500.0
+offset_bottom = 936.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aqjex")
+
+[node name="aboutus" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 377.0
+offset_top = 886.0
+offset_right = 889.0
+offset_bottom = 1398.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_rddrg")
+
+[node name="home" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 276.0
+offset_top = 886.0
+offset_right = 788.0
+offset_bottom = 1398.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("5_cvjj2")
+
+[node name="howto" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 178.0
+offset_top = 886.0
+offset_right = 690.0
+offset_bottom = 1398.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("6_uo3pq")
+
+[node name="history" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 70.0
+offset_top = 887.0
+offset_right = 582.0
+offset_bottom = 1399.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("7_yh4fw")
+
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Panel/Header/GoBack" to="." method="_on_go_back_pressed"]
+[connection signal="pressed" from="aboutus" to="." method="_on_aboutus_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="howto" to="." method="_on_howto_pressed"]
+[connection signal="pressed" from="history" to="." method="_on_history_pressed"]

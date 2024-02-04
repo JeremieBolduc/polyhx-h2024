@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_y3khy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xa03"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5

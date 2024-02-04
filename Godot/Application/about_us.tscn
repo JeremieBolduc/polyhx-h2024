@@ -28,7 +28,7 @@ metadata/_edit_vertical_guides_ = [250.0]
 layout_mode = 1
 urlToMainMenu = "res://Application/main_screen.tscn"
 
-[node name="Panel2" type="Panel" parent="Screen"]
+[node name="Panel3" type="Panel" parent="Screen"]
 custom_minimum_size = Vector2(460, 350)
 layout_mode = 1
 anchors_preset = 8
@@ -69,6 +69,6 @@ autowrap_mode = 2
 justification_flags = 34
 
 [node name="LogoWallpaper" type="Sprite2D" parent="."]
-position = Vector2(248, 800)
+position = Vector2(250, 755)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_k7fs4")
