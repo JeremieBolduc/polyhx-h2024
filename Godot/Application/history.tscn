@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d38lv3yyhw48d"]
+[gd_scene load_steps=5 format=3 uid="uid://bpeyix2lmttp0"]
 
 [ext_resource type="Script" path="res://Application/history.gd" id="1_cxvl5"]
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_nws43"]
-[ext_resource type="FontFile" uid="uid://gxpgup0y8y27" path="res://Media/Font/Sakamoto.ttf" id="2_n7uvu"]
-[ext_resource type="PackedScene" path="res://Application/button_template.tscn" id="2_rcfyh"]
+[ext_resource type="PackedScene" uid="uid://471io5grnwcd" path="res://Application/button_template.tscn" id="2_rcfyh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by5f3"]
 bg_color = Color(0.803922, 0.803922, 0.803922, 1)
@@ -30,31 +29,20 @@ script = ExtResource("1_cxvl5")
 layout_mode = 1
 urlToMainMenu = "res://Application/main_screen.tscn"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 194.0
-offset_top = 40.0
-offset_right = 306.0
-offset_bottom = 97.0
-theme_override_fonts/normal_font = ExtResource("2_n7uvu")
-theme_override_font_sizes/normal_font_size = 45
-text = "History"
-fit_content = true
-
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
 offset_left = 17.0
-offset_top = 97.0
+offset_top = 107.0
 offset_right = 480.0
-offset_bottom = 901.0
+offset_bottom = 911.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_by5f3")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 36.0
-offset_top = 121.0
+offset_top = 131.0
 offset_right = 249.0
-offset_bottom = 498.0
+offset_bottom = 508.0
 scale = Vector2(2, 2)
 vertical_scroll_mode = 3
 

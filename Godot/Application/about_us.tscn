@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dht2xdphotr1l"]
+[gd_scene load_steps=4 format=3 uid="uid://dht2xdphotr1l"]
 
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_yvbqf"]
-[ext_resource type="FontFile" uid="uid://gxpgup0y8y27" path="res://Media/Font/Sakamoto.ttf" id="2_jdbwe"]
 [ext_resource type="Texture2D" uid="uid://r3fuq20vkevu" path="res://Media/Images/Logo_Wallpaper.png" id="2_k7fs4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glvgr"]
@@ -38,28 +37,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -230.0
-offset_top = -307.0
+offset_top = -330.0
 offset_right = 230.0
-offset_bottom = 193.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_glvgr")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -87.5
-offset_top = 95.0
-offset_right = 87.5
-offset_bottom = 150.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_jdbwe")
-theme_override_font_sizes/font_size = 45
-text = "About "
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 custom_minimum_size = Vector2(45, 0)
@@ -70,9 +53,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -210.0
-offset_top = -273.0
+offset_top = -296.0
 offset_right = 212.0
-offset_bottom = 159.0
+offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.168627, 0.243137, 0.180392, 1)
@@ -86,6 +69,6 @@ autowrap_mode = 2
 justification_flags = 34
 
 [node name="LogoWallpaper" type="Sprite2D" parent="."]
-position = Vector2(246, 808)
-scale = Vector2(0.08, 0.08)
+position = Vector2(248, 800)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_k7fs4")

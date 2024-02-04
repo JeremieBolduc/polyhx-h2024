@@ -14,3 +14,7 @@ func _process(delta):
 
 func _on_go_back_pressed():
 	get_tree().change_scene_to_file(urlToMainMenu)
+
+
+func _on_texture_button_pressed():
+	get_tree().change_scene_to_file(urlToMainMenu)

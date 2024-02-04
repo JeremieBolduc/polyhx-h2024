@@ -30,16 +30,16 @@ metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Screen" parent="." instance=ExtResource("1_4ctd3")]
 layout_mode = 1
-urlToMainMenu = "res://Application/history.tscn"
+urlToMainMenu = "res://Application/main_screen.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 clip_contents = true
 layout_direction = 1
 layout_mode = 0
 offset_left = 80.0
-offset_top = 102.0
+offset_top = 139.0
 offset_right = 420.0
-offset_bottom = 419.0
+offset_bottom = 456.0
 color = Color(0.168627, 0.243137, 0.180392, 1)
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
@@ -55,33 +55,36 @@ offset_right = 3.05176e-05
 texture = SubResource("ImageTexture_tkkq1")
 expand_mode = 5
 stretch_mode = 5
-metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.408
 anchor_top = 0.458333
 anchor_right = 0.594
 anchor_bottom = 0.530983
+offset_top = 37.0
+offset_bottom = 36.9999
 theme_override_fonts/normal_font = ExtResource("2_ule1w")
 theme_override_font_sizes/normal_font_size = 60
 text = "Title"
-metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.16
 anchor_top = 0.530983
 anchor_right = 0.84
 anchor_bottom = 0.893162
+offset_top = 37.0
+offset_bottom = 37.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xptaa")
-metadata/_edit_use_anchors_ = true
 
 [node name="ResponseLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 108.0
-offset_top = 535.0
+offset_top = 572.0
 offset_right = 390.0
-offset_bottom = 797.0
+offset_bottom = 834.0
 theme_override_font_sizes/normal_font_size = 16
 scroll_following = true

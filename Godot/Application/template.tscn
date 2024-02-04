@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4b8037q6kkr0"]
+[gd_scene load_steps=5 format=3 uid="uid://d4b8037q6kkr0"]
 
 [ext_resource type="Script" path="res://Application/template.gd" id="1_nek5t"]
 [ext_resource type="Texture2D" uid="uid://dtsonar4swjdf" path="res://Media/Images/icons8-arrow-60.png" id="2_ap2fi"]
+[ext_resource type="Texture2D" uid="uid://8onn6pi5lp65" path="res://Media/Images/Trash_Talk_Line_Shadow.png" id="2_msxo3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbs7c"]
 bg_color = Color(0.266667, 0.431373, 0.290196, 0.662745)
@@ -23,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nek5t")
+metadata/_edit_vertical_guides_ = [250.0]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -32,6 +34,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pbs7c")
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 2
+anchor_left = 0.268
+anchor_top = -0.00854701
+anchor_right = 0.65048
+anchor_bottom = 0.144616
+offset_right = 2540.76
+offset_bottom = 1904.64
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("2_msxo3")
+metadata/_edit_use_anchors_ = true
 
 [node name="Header" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -51,4 +65,5 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 texture_normal = ExtResource("2_ap2fi")
 
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Panel/Header/GoBack" to="." method="_on_go_back_pressed"]
