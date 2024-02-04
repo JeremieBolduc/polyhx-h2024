@@ -28,7 +28,7 @@ corner_radius_bottom_left = 20
 [node name="HistoryButton" type="Button"]
 anchors_preset = -1
 anchor_right = 0.426
-anchor_bottom = 0.097547
+anchor_bottom = 0.102889
 offset_right = -1.52588e-05
 offset_bottom = -0.304001
 grow_horizontal = 2
