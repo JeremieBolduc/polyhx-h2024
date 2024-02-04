@@ -1,10 +1,11 @@
+import base64
 import json
 import os
 from http.client import HTTPException
 from fastapi import FastAPI
 from dotenv import load_dotenv
 from fastapi.responses import JSONResponse
-from bson import json_util
+from bson.json_util import dumps, loads
 
 from GPTTextModel import GPTTextModel
 from GPTVisionModel import GPTVisionModel
@@ -25,17 +26,19 @@ item_service = ItemService(db_connection_string)
 @app.get("/items")
 async def get_items():
     items = item_service.get_all()
-    items_json = json.dumps(items, default=json_util.default)
+    # items_json = json.dumps(items, sort_keys=True, indent=4, default=json_util.default)
 
-    return JSONResponse(content=items_json)
+    json_string = dumps(items)
+    return JSONResponse(json_string)
 
 @app.post("/items")
 async def create_item(payload: dict):
     try:
         base64_image = payload["image"]
         message = vision_model.infer(base64_image)
+        binary_image = base64.b64decode(base64_image)
         item = {
-            "image": base64_image,
+            "image": binary_image,
             "title": "some title",
             "recommendation": message
         }
@@ -44,25 +47,3 @@ async def create_item(payload: dict):
         return message
     except KeyError:
         raise HTTPException(status_code=400, detail="Invalid JSON format. 'image' key is required.")
-
-
-@app.post("/text")
-async def text(payload: dict):
-    try:
-        item_name = payload["text"]
-        message = text_model.infer(item_name)
-
-        return message
-    except KeyError:
-        raise HTTPException(status_code=400, detail="Invalid JSON format. 'item' key is required.")
-
-
-@app.post("/more")
-async def text(payload: dict):
-    try:
-        subject = payload["subject"]
-        message = text_model.say_more(subject)
-
-        return message
-    except KeyError:
-        raise HTTPException(status_code=400, detail="Invalid JSON format. 'item' key is required.")

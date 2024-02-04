@@ -8,8 +8,7 @@ class ItemService:
         self.collection = self.db["items"]
 
     def get_all(self):
-        cursor = self.collection.find({})
-        items = list(cursor)
+        items = self.collection.find()
 
         return items
 
