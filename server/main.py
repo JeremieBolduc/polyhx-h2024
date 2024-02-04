@@ -19,26 +19,33 @@ text_model = GPTTextModel()
 item_service = ItemService(db_connection_string)
 
 
-@app.post("/image")
-async def image(payload: dict):
+@app.get("/items")
+async def get_items():
+    items = item_service.get_all()
+    print(items)
+    return items
+
+@app.post("/items")
+async def create_item(payload: dict):
     try:
         base64_image = payload["image"]
         message = vision_model.infer(base64_image)
-        item_service.insert({
+        item = {
             "image": base64_image,
             "title": "some title",
             "recommendation": message
-        })
+        }
+        item_service.insert(item)
 
         return message
     except KeyError:
         raise HTTPException(status_code=400, detail="Invalid JSON format. 'image' key is required.")
 
 
-@app.post("/item")
-async def item(payload: dict):
+@app.post("/text")
+async def text(payload: dict):
     try:
-        item_name = payload["item"]
+        item_name = payload["text"]
         message = text_model.infer(item_name)
 
         return message

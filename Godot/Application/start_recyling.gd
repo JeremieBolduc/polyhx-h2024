@@ -45,10 +45,11 @@ func _on_confirm_pressed():
 		add_child(http_request)
 		http_request.request_completed.connect(self._on_request_completed)
 		
+		var headers = ["Content-Type: application/json;"]
 		var status = http_request.request(
 			"http://localhost:8000/image",
-			[], 
-			HTTPClient.METHOD_POST, 
+			headers,
+			HTTPClient.METHOD_POST,
 			JSON.stringify(payload)
 		)
 		
@@ -60,8 +61,9 @@ func _on_confirm_pressed():
 
 func _on_request_completed(result, response_code, headers, body):
 	$LoadingScene.visible = false
+	$VBoxContainer.visible = false
+
 	if response_code == 200:
-		print("Request successful")
-		print("Response body: ", body)
+		$Container/ResponseLabel.text = body.get_string_from_utf8()
 	else:
 		print("Request failed. Response code: ", response_code)
