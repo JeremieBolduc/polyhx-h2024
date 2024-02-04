@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://baqno8uyfmy3n"]
+[gd_scene load_steps=7 format=3 uid="uid://baqno8uyfmy3n"]
 
 [ext_resource type="Script" path="res://Application/start_recyling.gd" id="1_bdlu2"]
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="2_qys28"]
-[ext_resource type="PackedScene" uid="uid://bmkmjndlhqcgy" path="res://Application/loading_scene.tscn" id="2_w3hlw"]
+[ext_resource type="PackedScene" path="res://Application/loading_scene.tscn" id="2_w3hlw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g5en"]
 bg_color = Color(0.168627, 0.243137, 0.180392, 1)
@@ -10,6 +10,17 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsvvu"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [sub_resource type="ImageTexture" id="ImageTexture_g3ol5"]
 
@@ -48,6 +59,13 @@ ok_button_text = "Open"
 file_mode = 0
 access = 2
 
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 92.0
+offset_top = 470.0
+offset_right = 411.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qsvvu")
+
 [node name="Container" type="Control" parent="."]
 layout_mode = 1
 anchor_left = 0.07
@@ -69,9 +87,9 @@ scroll_following = true
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 152.0
-offset_top = 470.0
+offset_top = 505.0
 offset_right = 351.0
-offset_bottom = 591.0
+offset_bottom = 581.0
 
 [node name="UploadAnImage" type="Button" parent="VBoxContainer"]
 layout_mode = 2
