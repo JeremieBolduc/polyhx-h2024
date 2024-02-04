@@ -11,6 +11,8 @@ func generateItemList():
 	for item in itemList:
 		var instance = scene.instantiate()
 		$ScrollContainer/VBoxContainer.add_child(instance)
+		instance.setup(item)
+		
 
 func getItemList():
 
@@ -32,7 +34,6 @@ func getItemList():
 func _on_request_completed(result, response_code, headers, body):
 	$LoadingScene.visible = false
 	if response_code == 200:
-		var json = JSON.new()
 		var res = JSON.parse_string(body.get_string_from_utf8())
 		var data = JSON.parse_string(res)
 		
