@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmkmjndlhqcgy"]
+
+[ext_resource type="Script" path="res://Application/TourningAnimation.gd" id="1_l3img"]
+[ext_resource type="Texture2D" uid="uid://bt1ctceqw821j" path="res://Media/Images/LoadingUnder.png" id="2_yjl7k"]
+[ext_resource type="Texture2D" uid="uid://dlhk0jnhlrp66" path="res://Media/Images/LoadinOver.png" id="3_uun23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ffhp"]
+bg_color = Color(0, 0, 0, 0.313726)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="LoadingScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ffhp")
+
+[node name="TourningAnimation" type="Control" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3img")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Panel/TourningAnimation"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -88.0
+offset_right = 1961.0
+offset_bottom = 1960.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.085, 0.085)
+fill_mode = 4
+texture_under = ExtResource("2_yjl7k")
+texture_progress = ExtResource("3_uun23")
+
+[node name="Timer" type="Timer" parent="Panel/TourningAnimation"]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Panel/TourningAnimation/Timer" to="Panel/TourningAnimation" method="_on_timer_timeout"]
