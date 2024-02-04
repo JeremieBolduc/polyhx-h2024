@@ -83,9 +83,9 @@ texture = ExtResource("3_0olsf")
 [node name="Panel2" type="Panel" parent="Screen/Panel/Control"]
 layout_mode = 0
 offset_left = -184.0
-offset_top = 250.0
+offset_top = 225.0
 offset_right = 184.0
-offset_bottom = 472.0
+offset_bottom = 496.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5t4nx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Screen/Panel"]
@@ -115,6 +115,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "About "
 
+[node name="HowToRecycle" type="Button" parent="Screen/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "How To Recycle"
+
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/Start_Recycling" to="." method="_on_start_recycling_pressed"]
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/History" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="Screen/Panel/VBoxContainer/AboutUs" to="." method="_on_about_us_pressed"]
+[connection signal="pressed" from="Screen/Panel/VBoxContainer/HowToRecycle" to="." method="_on_how_to_recycle_pressed"]
