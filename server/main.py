@@ -1,4 +1,5 @@
 import os
+from http.client import HTTPException
 from fastapi import FastAPI
 from dotenv import load_dotenv
 
@@ -15,22 +16,31 @@ vision_model = GPTVisionModel(api_key)
 text_model = GPTTextModel()
 
 @app.post("/image")
-async def upload_file(payload: dict):
-    base64_image = payload["image"]
-    message = vision_model.infer(base64_image)
+async def image(payload: dict):
+    try:
+        base64_image = payload["image"]
+        message = vision_model.infer(base64_image)
 
-    return message
+        return message
+    except KeyError:
+        raise HTTPException(status_code=400, detail="Invalid JSON format. 'image' key is required.")
 
 @app.post("/item")
-async def text(payload: dict):
-    item_name = payload["item"]
-    message = text_model.infer(item_name)
+async def item(payload: dict):
+    try:
+        item_name = payload["item"]
+        message = text_model.infer(item_name)
 
-    return message
+        return message
+    except KeyError:
+        raise HTTPException(status_code=400, detail="Invalid JSON format. 'item' key is required.")
 
 @app.post("/more")
 async def text(payload: dict):
-    subject = payload["subject"]
-    message = text_model.say_more(subject)
+    try:
+        subject = payload["subject"]
+        message = text_model.say_more(subject)
 
-    return message
+        return message
+    except KeyError:
+        raise HTTPException(status_code=400, detail="Invalid JSON format. 'item' key is required.")
