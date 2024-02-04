@@ -24,6 +24,7 @@ grow_vertical = 2
 
 [node name="Screen" parent="." instance=ExtResource("1_yvbqf")]
 layout_mode = 1
+urlToMainMenu = "res://Application/main_screen.tscn"
 
 [node name="Panel2" type="Panel" parent="Screen"]
 custom_minimum_size = Vector2(460, 350)

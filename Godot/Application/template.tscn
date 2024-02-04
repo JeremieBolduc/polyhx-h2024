@@ -23,7 +23,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nek5t")
-urlToMainMenu = "res://Application/main_screen.tscn"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
