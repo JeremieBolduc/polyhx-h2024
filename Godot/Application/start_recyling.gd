@@ -1,5 +1,7 @@
 extends Control
 
+var image = null
+var globalPath = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	disable_and_hide_node($VBoxContainer/Confirm)
@@ -21,7 +23,8 @@ func _on_upload_an_image_pressed():
 
 func _on_file_dialog_file_selected(path):
 	enable_and_show_node($VBoxContainer/Confirm)
-	var image = Image.new()
+	globalPath = path
+	image = Image.new()
 	image.load(path)
 	
 	var image_texture = ImageTexture.new()
@@ -31,4 +34,7 @@ func _on_file_dialog_file_selected(path):
 
 
 func _on_confirm_pressed():
-	print("#####TODO###")
+	if image != null && globalPath != '':
+		var imageData = image.get_data()
+		var imageBase64 = Marshalls.raw_to_base64(imageData)
+		
