@@ -28,6 +28,7 @@ layout_mode = 1
 urlToMainMenu = "res://Application/how_to_recycle.tscn"
 
 [node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 117.0
 offset_right = 476.0
@@ -40,6 +41,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_qkxdh")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 53.0
 offset_top = 388.0
 offset_right = 455.0
