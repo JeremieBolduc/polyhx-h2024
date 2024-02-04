@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4b8037q6kkr0"]
 
 [ext_resource type="Script" path="res://Application/template.gd" id="1_nek5t"]
-[ext_resource type="Texture2D" uid="uid://dqsx761pqmf3t" path="res://Media/Images/arrow-left.svg" id="1_vedk3"]
+[ext_resource type="Texture2D" uid="uid://dtsonar4swjdf" path="res://Media/Images/icons8-arrow-60.png" id="2_ap2fi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbs7c"]
 bg_color = Color(0.266667, 0.431373, 0.290196, 0.662745)
@@ -37,15 +37,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_pbs7c")
 [node name="Header" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.064
-anchor_top = 0.032
-anchor_right = 0.16
-anchor_bottom = 0.083
-offset_top = 0.0479984
-offset_bottom = 0.311996
+anchor_left = 0.052
+anchor_top = 0.0181624
+anchor_right = 0.052
+anchor_bottom = 0.0181624
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 120.0
+offset_bottom = 120.0
+rotation = -3.14159
+metadata/_edit_use_anchors_ = true
 
 [node name="GoBack" type="TextureButton" parent="Panel/Header"]
 layout_mode = 2
-texture_normal = ExtResource("1_vedk3")
+texture_normal = ExtResource("2_ap2fi")
 
 [connection signal="pressed" from="Panel/Header/GoBack" to="." method="_on_go_back_pressed"]
