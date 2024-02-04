@@ -77,6 +77,7 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="Panel/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.0073185
@@ -93,16 +94,6 @@ anchor_right = 1.90625
 anchor_bottom = 0.628928
 theme_override_font_sizes/font_size = 50
 text = "Title"
-metadata/_edit_use_anchors_ = true
-
-[node name="Date" type="Label" parent="Panel/TextureRect"]
-layout_mode = 0
-anchor_left = 1.25
-anchor_top = 0.635002
-anchor_right = 2.28125
-anchor_bottom = 0.847604
-theme_override_font_sizes/font_size = 25
-text = "Date scanned"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]

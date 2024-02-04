@@ -11,16 +11,12 @@ func _on_button_pressed():
 
 func setup(data):
 	$Panel/TextureRect/Title.text = data['title']
-	#$Panel/TextureRect/Date.text = data['creationDate']
+
 	var image = Image.new()
-	
-	#var r = JSON.parse_string(data['image'])
-	print(type_string(typeof(data['image'])))
+	var raw_image = Marshalls.base64_to_raw(data['image']['$binary']['base64'])
 
-
-	#image.load_jpg_from_buffer(data['image'])
+	image.load_jpg_from_buffer(raw_image)
 	
-	#var image_texture = ImageTexture.new()
-	#image_texture.set_image(image)
-	#
-	#$Panel/sprite.texture = image_texture
+	var image_texture = ImageTexture.new()
+	image_texture.set_image(image)
+	$Panel/TextureRect.texture = image_texture
