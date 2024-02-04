@@ -1,4 +1,5 @@
 import requests
+import re
 
 class GPTVisionModel:
     def __init__(self, api_key):
@@ -19,6 +20,8 @@ class GPTVisionModel:
               {
                 "type": "text",
                 "text": """
+                    Answer with simple text format, not markdown.
+                    Don't put special characters in the answer (such as \\n).
                     Don't identify the object in the image; I already know what it is. 
                     I want to know what I can do to use the object in the image in terms 
                     of sustainable development. I want to be able to recycle or reuse it if possible
@@ -38,5 +41,7 @@ class GPTVisionModel:
 
       response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
       json = response.json()
+      text = json['choices'][0]['message']['content']
+      cleaned_string = re.sub(r'\n', '', text)
 
-      return json['choices'][0]['message']['content']
+      return cleaned_string

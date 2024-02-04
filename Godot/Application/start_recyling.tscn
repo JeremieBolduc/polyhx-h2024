@@ -47,6 +47,24 @@ ok_button_text = "Open"
 file_mode = 0
 access = 2
 
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.495726
+anchor_right = 0.07
+anchor_bottom = 0.495726
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ResponseLabel" type="RichTextLabel" parent="Container"]
+layout_mode = 0
+offset_left = -7.0
+offset_right = 433.0
+offset_bottom = 447.0
+theme_override_font_sizes/normal_font_size = 16
+scroll_following = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 152.0
