@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpeyix2lmttp0"]
+[gd_scene load_steps=6 format=3 uid="uid://bpeyix2lmttp0"]
 
 [ext_resource type="Script" path="res://Application/history.gd" id="1_cxvl5"]
 [ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_nws43"]
 [ext_resource type="PackedScene" uid="uid://471io5grnwcd" path="res://Application/button_template.tscn" id="2_rcfyh"]
+[ext_resource type="PackedScene" uid="uid://bmkmjndlhqcgy" path="res://Application/loading_scene.tscn" id="4_2q8iy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by5f3"]
 bg_color = Color(0.803922, 0.803922, 0.803922, 1)
@@ -51,3 +52,6 @@ layout_mode = 2
 
 [node name="HistoryButton" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_rcfyh")]
 layout_mode = 2
+
+[node name="LoadingScene" parent="." instance=ExtResource("4_2q8iy")]
+layout_mode = 1

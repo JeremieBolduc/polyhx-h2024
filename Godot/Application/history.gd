@@ -6,7 +6,7 @@ func _ready():
 	getItemList()
 
 func getItemList():
-	print("start")
+
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._on_request_completed)
@@ -17,14 +17,16 @@ func getItemList():
 		headers,
 		HTTPClient.METHOD_GET
 	)
-	print("requested")
+
 	
 	if status != OK:
 		push_error("An error occurred in the HTTP request.")
 		
 func _on_request_completed(result, response_code, headers, body):
-	print("completed")
+	$LoadingScene.visible = false
 	if response_code == 200:
-		print(body.get_string_from_utf8())
+		var res = JSON.parse_string(body.get_string_from_utf8())
+		
+		print(res)
 	else:
 		print("Request failed. Response code: ", response_code)
