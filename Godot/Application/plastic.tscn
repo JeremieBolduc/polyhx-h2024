@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://vd34ky37hbd4"]
+
+[ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_bpnbo"]
+[ext_resource type="Texture2D" uid="uid://2p4qbal2my2n" path="res://Media/Images/bag.png" id="2_ccxld"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7un8e"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Plastic" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" parent="." instance=ExtResource("1_bpnbo")]
+layout_mode = 1
+urlToMainMenu = "res://Application/how_to_recycle.tscn"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 117.0
+offset_right = 476.0
+offset_bottom = 810.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7un8e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.108
+anchor_top = 0.36859
+anchor_right = 0.922
+anchor_bottom = 0.858974
+theme_override_colors/default_color = Color(0.168627, 0.243137, 0.180392, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "-Plastic containers and packaging collected through curbside recycling may be sorted, cleaned, and transformed into a range of products.
+
+-If they are all placed in one bag in the recycling bin, bread and shopping bags, and plastic film may be easily recycled into many items, including new trash bags and household items."
+metadata/_edit_use_anchors_ = true
+
+[node name="Bag" type="Sprite2D" parent="."]
+position = Vector2(240, 234)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ccxld")

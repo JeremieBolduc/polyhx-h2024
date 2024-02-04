@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://di238ddm5dpmb"]
+
+[ext_resource type="PackedScene" uid="uid://d4b8037q6kkr0" path="res://Application/template.tscn" id="1_pc3ma"]
+[ext_resource type="Texture2D" uid="uid://skdmxmp4ad83" path="res://Media/Images/paper.png" id="2_2c6y5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1w2k8"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.168627, 0.243137, 0.180392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Paper" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" parent="." instance=ExtResource("1_pc3ma")]
+layout_mode = 1
+urlToMainMenu = "res://Application/how_to_recycle.tscn"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 117.0
+offset_right = 476.0
+offset_bottom = 810.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1w2k8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 429.0
+offset_right = 452.0
+offset_bottom = 727.0
+theme_override_colors/default_color = Color(0.168627, 0.243137, 0.180392, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "-Fold your cartons before putting them in the collection bin to optimize the filling of the bins.
+-Do not leave leftover food in packages.
+
+-Most paper and cardboard goes into your recycling bin."
+
+[node name="Paper" type="Sprite2D" parent="."]
+position = Vector2(241, 294)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_2c6y5")
